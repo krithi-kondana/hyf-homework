@@ -1,0 +1,274 @@
+/* Component Needs */
+
+
+.pc-tab>input,
+.pc-tab section>div {
+    display: none;
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3,
+#tab4:checked~section .tab4 {
+    display: block;
+    background: white;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: rgb(229, 240, 229);   
+}
+.pc-tab {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pc-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.pc-tab label.navigation, #submit {
+    display: block;
+    width: 23%;
+    height: 10%;
+    margin-left: auto;
+    background: rgb(191, 192, 194);
+    padding: 10px;
+    border-bottom: 0;
+    cursor : pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(gray 10%,white 60%,gray 150%);
+}
+#previous {
+    float: left;
+}
+.inputs {
+    padding: 10px;
+    margin-bottom: 2em;   
+}
+
+/* styling labels and inputs starts here */
+input, #country, #cardtype {
+    margin: 5px 0px 5px 0px;
+    padding: 8px;
+    height: 2%;
+    border-radius: 8px;
+    width: 20%;
+    border: 0.5px solid rgb(170, 173, 171); 
+    background:white;
+}
+label {
+    display: inline-block;
+    width: 25%;
+    font-size: 0.9em;
+    text-align: right;
+    font-weight: bold;   
+}
+/* styling labels and inputs ends here */
+
+.message {
+    width: 60%;
+    height: 100px;
+    margin-left: 5%;
+    border-radius: 8px;
+    border: 0.5px solid rgb(170, 173, 171); 
+}
+.profile-description {
+    width:100px;
+    font-size: 12px;
+    font-style: italic;
+    float: left;   
+}
+.dropdown {
+    padding: 10px 0 10px 0;
+}
+.submit {
+    text-align: right;
+}
+
+input[type=checkbox]:checked ~ .content {
+    display: none;
+}
+.content, .news {
+    margin-top: 3em;
+    margin-bottom: 2em;
+} 
+
+/* styling page 3 images starts here */
+.images-container {   
+    display: flex;
+    flex-wrap: wrap;   
+}
+ .images {
+     flex: 25%;
+     padding:5px;   
+ }
+.images img {
+    width:80%;
+    height: 60%;
+    border: 1px solid rgb(201, 196, 196);
+}
+.images p {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+/* styling page 3 images ends here */
+
+input[type="checkbox"]{
+    width:20px;
+    height:20px;
+}
+
+.tab3 p.list, p.newsletter {
+    margin-top: 3em;
+    margin-bottom:0;
+}
+
+/* radio tricks starts here */
+input[type="radio"] {
+    display: none;
+}
+.news {
+    display: inline-block;
+    margin-bottom: 3em;
+    margin-top: 1em;
+  }
+.news label {
+    margin-left:2em;
+    width:150px;
+    position: relative;
+} 
+.news input[type="radio"] + label:after {  
+    margin: 0 5px 0 5px; 
+    content: "";
+    border: 1px solid black;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    position: absolute;
+}
+.news input[type=radio]:checked + label:after {
+    background: #bad7f3;
+    border-radius: 10px;
+    border: 0.5px solid black;
+  }
+/* radio tricks ends here */
+
+#expirymonth, #expiryyear, #cvv, #postcode {
+    width: 70px;
+}
+header {
+    box-shadow: 5px 5px 5px 5px #e6e3e3;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo img {  
+    width: 200px;
+}
+/* styling navigation starts here */
+#nav ul {   
+    list-style: none;
+    font-size: 18px;
+    display:flex;
+    flex-wrap: wrap;
+}
+ #nav ul li {
+    width:80px;
+     padding: 10px; 
+}  
+#nav ul li:hover {
+    background: rgb(224, 238, 225);
+    cursor: pointer;
+}
+#nav ul ul {
+    display:none;
+}
+#nav ul li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    padding: 0; 
+}
+/* styling navigation ends here */
+
+.search-box input {
+    width: 250px;
+    height: 30px;
+    border: 0.5px solid gainsboro;
+    border-radius: 10px;  
+}
+#items ul {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+}
+ul li input {
+    margin-left: 5px;
+}
+/* styling progress bar starts here */
+progress {
+	width: 400px;
+	height: 20px;
+	-webkit-appearance: none;
+	border: none;
+}
+
+progress::-webkit-progress-bar {        /*style the background */
+	background: rgb(227, 231, 233);
+	border-radius: 50px;
+}
+
+progress::-webkit-progress-value {         /* value part */
+	border-radius: 50px;
+	background:
+	-webkit-linear-gradient(rgb(19, 140, 221) 1%,white 60%, rgb(34, 145, 236) 99%)		
+}
+/* styling progress bar ends here */
+
+section, .tab1, .tab2, .tab3, .tab4  {
+    padding: 20px;
+    width: 100%;
+}
+
+section div h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+em {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+    .news label {
+        display: block;
+        line-height: 2em;
+        
+    }
+    .message {
+        margin-left: 3em;  
+    }
+  }
