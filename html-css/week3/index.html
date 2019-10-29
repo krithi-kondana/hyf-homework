@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Homework week 3 Form</title>
+</head>
+
+<body>
+    <header>
+        <!-- logo image starts here -->
+        <div class="logo">
+            <img src="https://dcassetcdn.com/design_img/939035/164900/164900_5303754_939035_image.jpg"
+                alt="picture of a tree with good deed written under it">
+        </div>
+        <!-- logo ends here -->
+
+        <!-- navigation list starts here -->
+        <div id="nav">
+            <ul>
+                <li>Men
+                    <ul>
+                        <li>T-Shirts</li>
+                        <li>Jeans</li>
+                        <li>Shoes</li>
+                        <li>Wallets</li>
+                        <li>Belts</li>
+                    </ul>
+                </li>
+                <li>Women
+                    <ul>
+                        <li>Dresses</li>
+                        <li>Trousers</li>
+                        <li>Jewellery</li>
+                        <li>Handbags</li>
+                        <li>Sandals</li>
+                    </ul>
+                </li>
+                <li>Kids
+                    <ul>
+                        <li>Toys</li>
+                        <li>Books</li>
+                        <li>Arts</li>
+                        <li>clothes</li>
+                    </ul>
+                </li>
+                <li>Gadgets
+                    <ul>
+                        <li>Computers</li>
+                        <li>Mobiles</li>
+                        <li>TV</li>
+                        <li>Electricals</li>
+                    </ul>
+                </li>
+                <li>Discover
+                    <ul>
+                        <li>About</li>
+                        <li>Contact</li>
+                        <li>Jobs</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- navigation ends here -->
+
+        <!-- search box starts here -->
+        <div class="search-box">
+            <input type="search" id="search" name="searchbox" placeholder="search for products,brands and more">
+        </div>
+        <!-- search box ends here -->
+    </header>
+    
+
+    <!-- form starts here -->
+    <form id="form1" method="post" action="success.html">
+        <div class="pc-tab">
+            <input checked="checked" id="tab1" type="radio" name="pct" />
+            <input id="tab2" type="radio" name="pct" />
+            <input id="tab3" type="radio" name="pct" />
+            <input id="tab4" type="radio" name="pct" />
+            <section>
+                <!-- page 1 starts here -->
+                <div class="tab1">
+                    <h2>Sign up to gooddeed.com</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                    </p>
+                    <h3>Step 1/4 - Tell us who you are?</h3>
+                    <!-- progress bar -->
+                    Progress: <progress max="100" value="10"></progress>
+                    <p>Nice to meet you. Lets spend a minute to get to know each other? Please enter the following:</p>
+                    <!-- first page inputs starts here -->
+                    <div class="inputs">
+                        <label for="firstname">First Name* </label>
+                        <input type="text" class="input-required" id="firstname" name="firstname" required>
+
+                        <label for="lastname">Last Name* </label>
+                        <input type="text" class="input-required" id="lastname" name="lastname" required><br>
+
+                        <div class="dropdown">
+                            <label for="country">Country*</label>
+                            <select id="country">
+                                <option value="1">Select</option>
+                                <option value="2">Denmark</option>
+                                <option value="3">Netherlands</option>
+                                <option value="4">Sweden</option>
+                                <option value="5">Norway</option>
+                            </select>
+                        </div><br>
+                        <label for="streetaddress">Street address*</label>
+                        <input type="text" class="input-required" id="streetaddress" name="streetaddress" required>
+
+                        <label for="postcode">Post code*</label>
+                        <input type="text" maxlength="4" class="input-required" id="postcode" name="postcode" required><br><br>
+
+                        <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping
+                            address</p>
+                            <!-- check box starts here -->
+                        <div class="checkbox">
+                            <label for="checkbox1">Shipping address</label>
+                            <input type="checkbox" id="checkbox1" name="checkbox1">
+
+                            <div class="content">
+                                <label for="firstname">First Name* </label>
+                                <input type="text" class="input-required" id="firstname" name="firstname">
+
+                                <label for="lastname">Last Name* </label>
+                                <input type="text" class="input-required" id="lastname" name="lastname"><br>
+
+                                <div class="dropdown">
+                                    <label for="country">Country*</label>
+                                    <select id="country">
+                                        <option value="1">Select</option>
+                                        <option value="2">Denmark</option>
+                                        <option value="3">Netherlands</option>
+                                        <option value="4">Sweden</option>
+                                        <option value="5">Norway</option>
+                                    </select>
+                                </div><br>
+
+                                <label for="streetaddress">Street address*</label>
+                                <input type="text" class="input-required" id="streetaddress" name="streetaddress">
+
+                                <label for="postcode">Post code*</label>
+                                <input type="text" class="input-required" id="postcode" name="postcode">
+                            </div>
+                        </div><br>
+                        <!-- check box ends here -->
+
+                        <label for="message">Profile description</label><br>
+                        <textarea maxlength="500" class="message" id="message" name="message"></textarea>
+                        <p class="profile-description">Please provide a short description of yourself to be
+                            displayed on our social community
+                            pages</p>
+                    </div>
+                    <!--first page inputs ends here -->
+                    <label for="tab2" id="label2" class="navigation">Next</label>
+                </div>
+                <!--page 1 ends here -->
+
+                <!-- page 2 starts here -->
+                <div class="tab2">
+                    <h2>Sign up to gooddeed.com</h2>
+
+                    <h3>Step 2/4 - How can we reach you?</h3>
+                    <!-- progress bar -->
+                    Progress: <progress max="100" value="25"></progress>
+                    <p>We will probably need to stay in touch somehow. Let us know how can we reach you?</p>
+
+                    <!-- second page inputs starts here -->
+                    <div class="inputs">
+                        <label for="email">Email* </label>
+                        <input type="email" pattern="[a-zA-Z]{0-9}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}"
+                            class="input-required" id="email" name="email" placeholder="john@example.com" required>
+
+                        <label for="phone">Phone </label>
+                        <input type="tel" pattern="[0-9]{8}"  id="phone" name="phone"><br>
+
+                        <label for="password">Password*<br><em>Please include uppercase and lowercase letters</em></label>
+                        <input type="password" minlength="10" class="input-required" id="password" name="password" required><br>
+
+                        <label for="password">Re-enter password*</label>
+                        <input type="password" minlength="10" class="input-required" id="password" name="password" required>
+
+
+                        <p class="newsletter">I want to sign up for the newsletter</p>
+                        <!-- radio tricks starts here -->
+                        <div class="news">
+                            <input type="radio" id="weeklynews" name="news" checked><label for="weeklynews">Weekly
+                                news</label>
+                            <input type="radio" id="monthlynews" name="news"><label for="monthlynews">Monthly
+                                news</label>
+                            <input type="radio" id="nonews" name="news"> <label for="nonews">Dont send me news</label>
+                        </div>
+                        <!--radio tricks ends here -->
+                    </div>
+                    <!--second page inputs ends here -->
+                    <label for="tab1" id="previous" class="navigation">Previous</label>
+                    <label for="tab3" id="label3" class="navigation">Next</label>
+                </div>
+                <!-- page 2 ends here -->
+
+                <!-- page 3 starts here -->
+                <div class="tab3">
+                    <h2>Sign up to gooddeed.com</h2>
+
+                    <h3>Step 3/4 - Time to learn about your preferences?</h3>
+                    <!-- progress bar -->
+                    Progress: <progress max="100" value="50"></progress>
+                    <p class="list">What kind of items are you interested in offers on?</p>
+                    <!-- third page inputs starts here -->
+                    <div class="inputs">
+                        <div id="items">
+                            <ul>
+                                <li>apparels<input type="checkbox"></li>
+                                <li>accessories<input type="checkbox"> </li>
+                                <li> handbags<input type="checkbox"></li>
+                                <li>jewellery<input type="checkbox"> </li>
+                                <li>shoes<input type="checkbox"> </li>
+                            </ul>
+                        </div>
+                       
+                        <p>Choose the images that best resemble your style</p>
+                        <div class="images-container">
+                            <div class="images">
+                                <a
+                                    href="https://imgaz1.chiccdn.com/thumb/large/oaupload/newchic/images/AB/17/a72c5695-7728-4cf4-a1cf-8bce9af9e14d.jpeg"><img
+                                        src="https://imgaz1.chiccdn.com/thumb/large/oaupload/newchic/images/AB/17/a72c5695-7728-4cf4-a1cf-8bce9af9e14d.jpeg"
+                                        alt="bag"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a
+                                    href="https://onceit.imgix.net/uploads/images/f99c6e69e1227ecc44cc3364f7663814.jpg?w=1800&h=1800&fit=clip&fm=jpg&q=75&auto=format%2Ccompress"><img
+                                        src="https://onceit.imgix.net/uploads/images/f99c6e69e1227ecc44cc3364f7663814.jpg?w=1800&h=1800&fit=clip&fm=jpg&q=75&auto=format%2Ccompress"
+                                        alt="necklace"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a href="https://images-na.ssl-images-amazon.com/images/I/81o-5klEKUL._UX395_.jpg"><img
+                                        src="https://images-na.ssl-images-amazon.com/images/I/81o-5klEKUL._UX395_.jpg"
+                                        alt="pink shoes"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a href="https://images-na.ssl-images-amazon.com/images/I/31J-fVh1HZL._SX342_QL70_.jpg"><img
+                                        src="https://images-na.ssl-images-amazon.com/images/I/31J-fVh1HZL._SX342_QL70_.jpg"
+                                        alt="blue dress"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a
+                                    href="https://www.wigglestatic.com/product-media/5360115728/Garmin_735XT%20(Black&Grey)(1).jpg?w=430&h=430&a=7"><img
+                                        src="https://www.wigglestatic.com/product-media/5360115728/Garmin_735XT%20(Black&Grey)(1).jpg?w=430&h=430&a=7"
+                                        alt="watch"></a>
+                                <p> Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a
+                                    href="https://cdn.shopify.com/s/files/1/1950/6221/products/GHOST_Resize_R19_Oct19_1200x.jpg?v=1569838098"><img
+                                        src="https://cdn.shopify.com/s/files/1/1950/6221/products/GHOST_Resize_R19_Oct19_1200x.jpg?v=1569838098"
+                                        alt="white dress"></a>
+                                <p> Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a
+                                    href="https://www.chloeward.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/0073-pink_2.jpg"><img
+                                        src="https://www.chloeward.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/0073-pink_2.jpg"
+                                        alt="small pink bag"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                            <div class="images">
+                                <a
+                                    href="https://sc01.alicdn.com/kf/HTB1m0L3LVXXXXX6XFXXq6xXFXXXj/221632664/HTB1m0L3LVXXXXX6XFXXq6xXFXXXj.jpg">
+                                    <img src="https://sc01.alicdn.com/kf/HTB1m0L3LVXXXXX6XFXXq6xXFXXXj/221632664/HTB1m0L3LVXXXXX6XFXXq6xXFXXXj.jpg"
+                                        alt="black sandals"></a>
+                                <p>Select <input type="checkbox"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third page inputs ends here -->
+                    <label for="tab2" id="previous" class="navigation">Previous</label>
+                    <label for="tab4" id="label4" class="navigation">Next</label>
+                </div>
+                <!-- page 3 ends here -->
+
+                <!-- page 4 starts here -->
+                <div class="tab4">
+                    <h2>Sign up to gooddeed.com</h2>
+
+                    <h3>Step 4/4 - Payment</h3>
+                    <!-- progress bar -->
+                    Progress: <progress max="100" value="85"></progress>
+                    <p>Please fill in your payment data</p>
+
+                    <!-- forth page inputs starts here -->
+                    <div class="inputs">
+                        <label for="name">Name on card </label>
+                        <input type="text" class="input-required" id="name" name="name" required><br>
+
+                        <div class="dropdown">
+                            <label for="cardtype">Card type</label>
+                            <select id="cardtype">
+                                <option value="1">Select</option>
+                                <option value="2">Visa</option>
+                                <option value="3">Master</option>
+                                <option value="4">Debit</option>
+                                <option value="5">Credit</option>
+                            </select>
+                        </div>
+
+                        <label for="cardnumber">Credit card number </label>
+                        <input type="tel" maxlength="16" minlength="16" class="input-required" id="cardnumber"
+                            name="cardnumber" required>
+                        <label for="firstname">First name </label>
+                        <input type="text" class="input-required" id="firstname" name="firstname" required><br>
+                        <label for="expirymonth">Expiry month </label>
+                        <input type="number" class="input-required" id="expirymonth" name="expirymonth" required>
+                        <label for="expiryyear">Expiry year </label>
+                        <input type="number" class="input-required" id="expiryyear" name="expiryyear" required><br>
+                        <label for="cvv">CVV </label>
+                        <input type="tel" maxlength="3" minlength="3" class="input-required" id="cvv" name="cvv" required><br>
+                    </div>
+                    <!-- fourth page inputs ends here -->
+                    <label for="tab3" id="previous" class="navigation">Previous</label>
+                    <div class="submit"><input type="submit" id="submit"></div>
+                </div>
+                <!-- page 4 ends here -->
+            </section>
+        </div>
+    </form>
+    <!-- form ends here -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
