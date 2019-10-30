@@ -1,4 +1,8 @@
 germany
 prague
 norway
+<<<<<<< HEAD
 sweden
+=======
+india
+>>>>>>> b0670448abc4957ac8631aa6d8b56561c88eb640
