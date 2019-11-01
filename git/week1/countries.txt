@@ -2,3 +2,5 @@ norway
 prague
 hamburg
 sweden
+india
+holland
