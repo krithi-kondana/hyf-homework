@@ -15,66 +15,12 @@ let dogYear;
 const x = 4;
 let shouldShowResultInDogYears = false;
 if (shouldShowResultInDogYears) {
-dogYear = dogYearFuture - dogYearOfBirth;
-console.log("Your dog will be " + dogYear + " dog  years old in " + dogYearFuture)
+dogAgeInDogYear = dogYearFuture - dogYearOfBirth;
+console.log("Your dog will be " + dogAgeInDogYear + " dog  years old in " + dogYearFuture)
 }
 else { 
- if (dogYearFuture - dogYearOfBirth === 1) {
-    dogYear = 15;   
-}
- if (dogYearFuture - dogYearOfBirth === 2) {
-     dogYear = x * (x+1) + x;   
-}
- if (dogYearFuture - dogYearOfBirth === 3) {
-     dogYear = x * (x+2) + x;   
-}
- if (dogYearFuture - dogYearOfBirth === 4) {
-     dogYear = x * (x+3) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 5) {
-     dogYear = x * (x+4) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 6) {
-     dogYear = x * (x+5) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 7) {
-     dogYear = x * (x+6) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 8) {
-     dogYear = x * (x+7) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 9) {
-     dogYear = x * (x+8) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 10) {
-     dogYear = x * (x+9) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 11) {
-     dogYear = x * (x+10) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 12) {
-     dogYear = x * (x+11) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 13) {
-     dogYear = x * (x+12) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 14) {
-     dogYear = x * (x+13) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 15) {
-     dogYear = x * (x+14) + x;   
- }
- if (dogYearFuture - dogYearOfBirth === 16) {
-     dogYear = x * (x+15) + x;   
- }
-console.log("Your dog will be " + dogYear + " human years old in " + dogYearFuture)
-
-if (dogYearFuture - dogYearOfBirth > 16){
-     console.log("Dogs cannot survive more than 16 years");  
-}
-if (dogYearFuture - dogYearOfBirth < 0){
-    console.log("Your dog is not yet born");  
-}
+    dogAgeInHumanYear = (dogYearFuture - dogYearOfBirth)* 7;
+console.log("Your dog will be " + dogAgeInHumanYear + " human years old in " + dogYearFuture)
 }
 
 
