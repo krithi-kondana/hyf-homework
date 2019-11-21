@@ -24,10 +24,10 @@ const travelInformation = {
 function travelTime(travelInformation) {
 
     const travelTime = (travelInformation.destinationDistance / travelInformation.speed) * 60;
-    var hours = (travelTime / 60);
-    var rhours = Math.floor(hours);
-    var minutes = (hours - rhours) * 60;
-    var rminutes = Math.round(minutes);
+    const hours = (travelTime / 60);
+    const rhours = Math.floor(hours);
+    const minutes = (hours - rhours) * 60;
+    const rminutes = Math.round(minutes);
     console.log(`${rhours} hours and ${rminutes} minutes.`);
 }
 
