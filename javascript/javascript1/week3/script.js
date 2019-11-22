@@ -6,7 +6,12 @@ console.log("............................Item array removal.....................
 // Item array removal
 const names = ['Peter', 'Ahmad', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala'];
 const nameToRemove = 'Ahmad';
-names.splice(1, 1);
+for (i = 0; i < names.length; i++) {
+
+    if (names[i] === nameToRemove) {
+        names.splice([i], 1);
+    }
+}
 console.log(names);
 console.log("\n");
 
@@ -149,7 +154,7 @@ function getSongByTitle(title) {
 
     for (i = 0; i < songDatabase.length; i++) {
 
-        if (title == songDatabase[i].title) {
+        if (title === songDatabase[i].title) {
 
             songsArray.push(songDatabase[i]);
         }
@@ -177,21 +182,32 @@ console.log("\n");
 
 console.log("................Creating our own playlist..................");
 // Creating our own playlist
+
 const myPlaylist = [];
 
 function addSongToMyPlaylist(title) {
+    if (title) {
+        let matchTitle = false;
+        for (i = 0; i < songDatabase.length; i++) {
 
-    for (i = 0; i < songDatabase.length; i++) {
+            if (title === songDatabase[i].title) {
+                myPlaylist.push(songDatabase[i]);
+                matchTitle = true;
+            }
 
-        if (title == songDatabase[i].title) {
-            myPlaylist.push(songDatabase[i]);
+        }
+
+        if (!matchTitle) {
+            console.log("Song with this title is not found in database");
+
         }
     }
 }
-
-addSongToMyPlaylist("Blacker than black");
-addSongToMyPlaylist('When is enough too little?');
 console.log(myPlaylist);
+addSongToMyPlaylist("My baby");
+addSongToMyPlaylist('When is enough too little?');
+addSongToMyPlaylist('When  little?');
+
 
 
 

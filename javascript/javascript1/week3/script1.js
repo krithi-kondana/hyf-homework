@@ -19,7 +19,7 @@ console.log(".............................get a note............................
 const idNotes = [];
 function getNoteFromId(id) {
 
-    if (id && !isNaN(id)) {
+    if (id) {
 
         let matchId = false;
 
@@ -52,8 +52,10 @@ console.log("\n");
 
 console.log("............................get all notes..................................");
 // get all notes
-const getAllNotes = notes;
-console.log(getAllNotes);
+function getAllNotes() {
+    console.log(notes);
+}
+getAllNotes();
 console.log("\n");
 
 
