@@ -9,6 +9,10 @@ addNote("apple", 10);
 addNote("orange", 6);
 
 console.log(notes);   //output shows grapes instead of apple because i have used a unique feature of replacing content based on id in line 104. Thus apple gets replaced with grapes everywhere
+// I would either change this name here or change it on the other side,cause if it change then it doesn't satisfy the task request
+// that asked to save a note into the array, something that is not always true due to the change that you have done below.
+// notes is declared as global variable, even if you have initialized as a const , it will affect , cause you are changing the content inside the object , but not the array itself.
+
 console.log("\n");
 
 
