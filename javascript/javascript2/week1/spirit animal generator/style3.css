@@ -1,0 +1,17 @@
+body {
+    background: rgb(245, 244, 174);
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    text-decoration: underline;
+}
+input, select, button {
+    border-radius: 30px;
+    padding:10px;
+    background: white;
+}
+#spirit-name {
+    font-size: 30px;
+}

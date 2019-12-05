@@ -1,0 +1,18 @@
+body {
+    background: rgb(245, 244, 174);
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    text-decoration: underline;
+}
+input, button {
+    border-radius: 30px;
+    padding:10px;
+    background: white;
+    width: 200px;
+}
+#result {
+    font-size: 30px;
+}
