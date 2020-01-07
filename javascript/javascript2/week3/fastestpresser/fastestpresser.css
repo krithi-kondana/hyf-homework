@@ -1,0 +1,48 @@
+body {
+    background: rgb(216, 178, 178);
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Pacifico', cursive;
+}
+#container {
+    display:flex;
+    justify-content: center;
+}
+input {
+    height: 10px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    background: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#s-container, #l-container {
+    width: 400px;
+    height: 200px;
+    padding-top: 50px;
+    border: 2px solid white;
+    background: cadetblue;
+    position: relative;
+}
+#canvas-s, #canvas-l {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  #error {
+      color: red;
+  }
+  #content {
+      background: white;
+      color: cadetblue;
+      width:300px;
+  }
