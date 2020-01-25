@@ -41,6 +41,16 @@ function fastpress() {
     else {
         if (event.currentTarget.id == 'start') {
             startClick = true;
+
+            let timeleft = inputValue;
+            let timer = setInterval(() => {
+                document.getElementById("content").innerHTML = `Countdown timer<br> ${timeleft}`;
+                timeleft -= 1;
+                if (timeleft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("content").innerHTML = "Time up"
+                }
+            }, 1000);
         }
         else if (startClick) {
             counter()
@@ -51,6 +61,8 @@ function fastpress() {
         }
     }
 }
+
+
 
 function time() {
 
@@ -67,7 +79,7 @@ function time() {
     else if (countL = countS) {
         document.getElementById('content').innerText = 'Oops! Its a draw';
     }
-    
+
     window.removeEventListener('keydown', fastpress);
 
 }

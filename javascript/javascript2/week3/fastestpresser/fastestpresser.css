@@ -42,7 +42,7 @@ button {
       color: red;
   }
   #content {
-      background: white;
-      color: cadetblue;
+      background: rgb(216, 178, 178);
+      color: black;
       width:300px;
   }
