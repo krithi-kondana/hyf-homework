@@ -26,6 +26,10 @@ input {
 }
 button {
     height: 30px;
+    background: rgb(85, 185, 231);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
 }
  #weather-icon, #temperature {
     font-size: 32px;
@@ -33,4 +37,7 @@ button {
 }
 #list {
     font-size: 26px;
+}
+#error {
+    color:red;
 }
