@@ -40,12 +40,12 @@ canvas.setAttribute('height', window.innerHeight);
 
 
 //  Now lets make art!
-function getRandomCircles() {
+function randomCircles() {
     let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);       //source: https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj
     const randomCircle = new Circle(Math.random() * window.innerWidth, Math.random() * window.innerHeight, Math.random() * 50, 0, 2 * Math.PI, randomColor)
     randomCircle.draw()
 }
-setInterval(getRandomCircles, 500);
+setInterval(randomCircles, 500);
 
 
 
