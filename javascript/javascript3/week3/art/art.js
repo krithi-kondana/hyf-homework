@@ -42,6 +42,9 @@ canvas.setAttribute('height', window.innerHeight);
 //  Now lets make art!
 function randomCircles() {
     let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);       //source: https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj
+    //Why number 16777215?
+    //RGB (Red, Green, Blue) are 8 bit each. The range for each individual colour is 0-255 (as 2^8 = 256 possibilities).The combination range is 256*256*256 = 16777216.
+    //convert the number into hexadecimal format and 16777216 converts to 1000000 and 16777215 converts to ffffff. Hence we proceed with 167777215 as the highest number for hexadecimal conversion
     const randomCircle = new Circle(Math.random() * window.innerWidth, Math.random() * window.innerHeight, Math.random() * 50, 0, 2 * Math.PI, randomColor)
     randomCircle.draw()
 }
