@@ -43,49 +43,37 @@ img {
     margin: 5px;
 }
 
-.exp-rel-container {
+.exp-rel-container, .edu-contact-container {
     width:75%;
     margin: 1em auto;
 }
-#hyf {
+#experience, #education, #contact, #hyf {
+    background: whitesmoke;
     padding: 10px;
-    background: rgb(230, 236, 243);
-    float: right;
     box-shadow: 10px 10px 5px 5px slategray;
-    border-radius: 25px; 
+    border-radius: 25px;
+}
+#experience, #education {
+    width: 58%;
+    float: left;
+    margin: 1em auto;
+}
+#hyf, #contact {
+    float: right;
+    width:35%;
+    height:400px;
+    margin: 1em auto;
+}
+#contact {
+    height: 170px;
 }
 #hyf ul {
     list-style: none;
 }
 
-#experience, #education {
-    background: whitesmoke;
-    padding: 10px;
-    box-shadow: 10px 10px 5px 5px slategray;
-    border-radius: 25px;
-    width: 65%;
-}
 table, th, td {
     border:1px solid black;
-}
-.edu-contact-container {
-    width:75%;
-    margin: 1em auto; 
-}
-#education {
-    float: left;
-    margin-bottom: 1em;
-}
-  
-#contact {
-    width:350px;
-    height: 150px;
-    float: right; 
-    background: whitesmoke;
-    padding: 5px;
-    box-shadow: 10px 10px 5px 5px slategray;
-    border-radius: 25px;  
-}
+} 
 
 #footer {
     padding: 10px;
