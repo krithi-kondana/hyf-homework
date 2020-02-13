@@ -2,7 +2,7 @@
 switched to db Todo
 
 
-> db.task.insert([{"title":"Wash clothes", "description":"Title says it all.", "created":"2017-10-25 06:54:16", "updated":"2017-10-15 13:05:09", "due_date":""},)
+> db.task.insert([{"title":"Wash clothes", "description":"Title says it all.", "created":"2017-10-25 06:54:16", "updated":"2017-10-15 13:05:09", "due_date":""},
 ...  {"title":"Become a billionaire", "description":"This should not take long, just invent a time machine, travel back to 2010 and buy bitcoin", "created":"2017-09-26 03:06:46", "updated":"2017-10-08 06:14:31", "due_date":"2017-12-22 20:58:03"},
 ...  {"title":"Plan meeting with London office", "description":"We will probably use skype", "created":"2017-10-04 18:07:37", "updated":"2017-10-14 16:01:31", "due_date":"2017-12-05 19:42:15"},
 ...  {"title":"Order groceries online", "description":"The fridge is almost empty, we need eggs and milk", "created":"2017-09-20 19:34:43", "updated":"2017-10-15 23:35:45", "due_date":"2017-12-24 16:00:46"},
