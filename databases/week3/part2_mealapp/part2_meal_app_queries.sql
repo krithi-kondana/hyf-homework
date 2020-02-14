@@ -77,9 +77,10 @@ from meal
 where price < '70';
 
 -- 2.Get meals that still has available reservations
-select meal.title, meal.description, meal.max_reservations, reservation.number_of_guests, meal.max_reservations-reservation.number_of_guests as available_reservations
+select meal.id,meal.title, meal.max_reservations, sum(reservation.number_of_guests) as total_guests
 from meal inner join reservation on reservation.meal_id = meal.id
-where meal.max_reservations > reservation.number_of_guests;
+group by meal.id
+having meal.max_reservations > total_guests;
 
 
 -- 3.Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
