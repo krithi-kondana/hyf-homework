@@ -82,7 +82,6 @@ from meal inner join reservation on reservation.meal_id = meal.id
 group by meal.id
 having meal.max_reservations > total_guests;
 
-
 -- 3.Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 select * 
 from meal
