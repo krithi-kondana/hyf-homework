@@ -14,7 +14,7 @@ mealsJson.forEach(meal => {
 })
 
 app.get("/", (request, response) => {
-    let randomMeal = mealsJson[Math.floor(Math.random() * mealsJson.length)];
+    const randomMeal = mealsJson[Math.floor(Math.random() * mealsJson.length)];
     response.send(randomMeal);
 });
 
