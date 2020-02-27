@@ -1,17 +1,26 @@
 body {
-    background: rgb(216, 178, 178);
+    background: linear-gradient(to bottom, #663300 0%, #ffffcc 100%);
     text-align: center;
     font-size: 26px;
     font-family: 'Pacifico', cursive;
 }
+
 #container {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
+
 input {
     height: 10px;
+    width: 220px;
     padding: 10px;
     font-size: 22px;
+    box-shadow: 5px 10px 20px #663300 inset;
+}
+
+h2 {
+    font-weight: 200;
+    color: #ffffcc;
 }
 
 button {
@@ -21,28 +30,35 @@ button {
     font-family: 'Pacifico', cursive;
     font-size: 22px;
     cursor: pointer;
+    box-shadow: 5px 10px 20px #663300 inset;
 }
 
-#s-container, #l-container {
+#s-container,
+#l-container {
     width: 400px;
     height: 200px;
     padding-top: 50px;
     border: 2px solid white;
-    background: cadetblue;
+    background: linear-gradient(to bottom, #663300 0%, #ffffcc 100%);
+    color: #ffffcc;
     position: relative;
 }
-#canvas-s, #canvas-l {
+
+#canvas-s,
+#canvas-l {
     left: 0;
     height: 100%;
     position: absolute;
     top: 0;
     width: 100%;
-  }
-  #error {
-      color: red;
-  }
-  #content {
-      background: rgb(216, 178, 178);
-      color: black;
-      width:300px;
-  }
+}
+
+#error {
+    color: rgb(80, 27, 27);
+}
+
+#content {
+    background: linear-gradient(to bottom, #663300 0%, #ffffcc 100%);
+    color: #ffffcc;
+    width: 300px;
+}
