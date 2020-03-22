@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 
+const router = express.Router();
 const reviewsJson = require(__dirname + '/../data/reviews.json');
 
-app.get("/", (request, response) => {
+router.get("/", (request, response) => {
     response.send(reviewsJson);
 });
 
-app.get("/:id", (req, res) => {
+router.get("/:id", (req, res) => {
     const matchedId = reviewsJson.some(reviewId => reviewId.id === Number(req.params.id));
     if (matchedId) {
         const matchedIdReview = reviewsJson.filter(review => review.id === Number(req.params.id));
@@ -18,4 +19,4 @@ app.get("/:id", (req, res) => {
     }
 })
 
-module.exports = app;
+module.exports = router;
