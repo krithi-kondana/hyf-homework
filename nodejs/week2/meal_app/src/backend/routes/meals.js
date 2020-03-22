@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
     const createdAfter = req.query["createdAfter"];
     const limit = req.query["limit"];
 
-    if (req.originalUrl === '/meals') {
+    if (Object.entries(req.query).length === 0) {
         res.send(mealsJson)
     }
     //  http://localhost:3000/meals
