@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const router = express.Router();
 
 const mealsJson = require(__dirname + '/../data/meals.json');
 const reviewsJson = require(__dirname + '/../data/reviews.json');
@@ -8,7 +9,7 @@ mealsJson.forEach(meal => {
     meal.review = reviewsJson.filter(mealReview => mealReview.mealId === meal.id)
 });
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
     const maxPrice = req.query["maxPrice"];
     const title = req.query["title"];
     const createdAfter = req.query["createdAfter"];
@@ -69,7 +70,7 @@ app.get("/", (req, res) => {
 })
 
 
-app.get("/:id", (req, res) => {
+router.get("/:id", (req, res) => {
     const matchedId = mealsJson.some(mealId => mealId.id == req.params.id); //returns true or false
     if (matchedId) {
         const matchedIDMeal = mealsJson.filter(meal => meal.id === Number(req.params.id));
@@ -87,4 +88,4 @@ app.get("/:id", (req, res) => {
 })
 // http://localhost:3000/meals/2
 
-module.exports = app;
+module.exports = router;
