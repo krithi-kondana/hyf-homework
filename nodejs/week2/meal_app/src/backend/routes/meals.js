@@ -10,65 +10,42 @@ mealsJson.forEach(meal => {
 });
 
 router.get("/", (req, res) => {
-    const maxPrice = req.query["maxPrice"];
-    const title = req.query["title"];
-    const createdAfter = req.query["createdAfter"];
-    const limit = req.query["limit"];
+    const { maxPrice,title, createdAfter, limit } = req.query
 
     if (Object.entries(req.query).length === 0) {
         res.send(mealsJson)
     }
     //  http://localhost:3000/meals
-
-    if (maxPrice) {
-        if (isNaN(parseFloat(maxPrice))) {
+    
+    const result = mealsJson
+    .filter(meal => {
+        if (maxPrice && isNaN(parseFloat(maxPrice))) {
             res.status(400).send(`Error!Please enter a number`);
         }
-        else {
-            const mealsWithPriceSmallerThanMaxPrice = mealsJson.filter(meal => meal.price < Number(maxPrice))
-            res.send(mealsWithPriceSmallerThanMaxPrice);
-        }
-    }
-    //  http://localhost:3000/meals?maxPrice=50
-
-    if (title) {
-        const matchedTitle = mealsJson.some(meal => meal.title.toLowerCase().includes(title.toLowerCase()))    //returns true or false 
-        if (matchedTitle) {
-            const mealsWithMatchedTitle = mealsJson.filter(meal => meal.title.toLowerCase().includes(req.query["title"].toLowerCase()))
-            res.send(mealsWithMatchedTitle);
-        }
-        else {
-            res.send(`No meal with title matching ${title}`)
-        }
-    }
-    // http://localhost:3000/meals?title=indian
-
-    if (createdAfter) {
-        if (isNaN(parseFloat(createdAfter))) {
+        else if(maxPrice) {
+            return meal.price < Number(maxPrice)
+        } 
+        return true
+    })
+    .filter(meal => {
+        if (createdAfter && isNaN(parseFloat(createdAfter))) {
             res.status(400).send(`Error!please enter a date format yyyy-mm-dd`);
+            }
+        if(createdAfter) {
+            return new Date(meal.createdAt) > new Date(createdAfter)
         }
-        else {
-            const mealsCreatedAfterGivenDate = mealsJson.filter(meal => new Date(meal.createdAt) > new Date(createdAfter))
-            res.send(mealsCreatedAfterGivenDate)
-        }
-    }
-    // http://localhost:3000/meals?createdAfter=2019-12-06
-
-    if (limit) {
-        if (isNaN(parseFloat(limit))) {
-            res.status(400).send(`Error!Please enter a number`);
-        }
-        else {
-            const spicificNumberOfMeals = mealsJson.slice(0, (Number(limit)))
-            res.send(spicificNumberOfMeals)
-        }
-    }
-    // http://localhost:3000/meals?limit=1
-
-    res.send(`Please enter proper query`);
-
+        return true
+    })
+    .filter(meal => {
+        if(title) {
+            return meal.title.toLowerCase().includes(title.toLowerCase())
+        } 
+        return true
+    })
+    .slice(0, limit != null ? Number(limit) : mealsJson.length)
+    
+    res.send(result);
 })
-
 
 router.get("/:id", (req, res) => {
     const matchedId = mealsJson.some(mealId => mealId.id == req.params.id); //returns true or false
