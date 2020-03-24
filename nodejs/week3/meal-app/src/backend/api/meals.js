@@ -71,14 +71,14 @@ router.get("/", (req, res) => {
 
 
 // Returns all meals
-router.get("/", (req, res) => {
-    pool.query("select * from meal", function(error, results, fields) {
-        if (error) {
-            console.log(err);;
-        }
-        res.send(results)
-    });
-});
+// router.get("/", (req, res) => {
+   // pool.query("select * from meal", function(error, results, fields) {
+     //   if (error) {
+       //     console.log(err);;
+        //}
+        //res.send(results)
+    //});
+//});
 // http://localhost:5000/api/meals
 
 
