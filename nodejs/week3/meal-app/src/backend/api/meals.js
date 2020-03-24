@@ -39,7 +39,7 @@ router.get("/", (req, res) => {
     } else if (title) {
         pool.query(`select * 
         from meal
-        where title like '%${title}%'`, function(error, results, fields) {
+        where title like ?`, `%${title}%`, function(error, results, fields) {
             if (error) {
                 console.log(error);;
             }
