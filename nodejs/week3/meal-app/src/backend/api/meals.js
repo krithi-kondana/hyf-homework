@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
             // http://localhost:5000/api/meals
         })
     } else if (maxPrice) {
-        pool.query(`select * from meal where price < ${parseFloat(maxPrice)}`, function(error, results, fields) {
+        pool.query(`select * from meal where price < ?`, parseFloat(maxPrice), function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
