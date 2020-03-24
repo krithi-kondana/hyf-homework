@@ -49,7 +49,7 @@ router.get("/", (req, res) => {
     } else if (createdAfter) {
         pool.query(`select *
         from meal
-        where created_date > '${createdAfter}'`, function(error, results, fields) {
+        where created_date > ?`, `${createdAfter}`, function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
@@ -59,7 +59,7 @@ router.get("/", (req, res) => {
     } else if (limit) {
         pool.query(`select *
         from meal
-        limit ${limit}`, function(error, results, fields) {
+        limit ?`, `${limit}`, function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
