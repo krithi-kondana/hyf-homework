@@ -29,23 +29,16 @@ const todosArray = [
   { description: 'Wash clothes', deadline: new Date('2020-03-28').toDateString()}
 ]
 
-class Header extends React.Component {
-  render() {
-    return (
-    <header>
+function Header() {
+  return (<header>
       <h3>Todo list</h3>
     </header>)
-  }
 }
-
-class Footer extends React.Component {
-  render() {
-    return (
-      <footer>
-        <h4>Have a nice day!</h4>
-      </footer>
-    )
-  }
+          
+function Footer() {
+  return (<footer>
+      <h4>Have a nice day!</h4>
+    </footer>)
 }
 
 ReactDOM.render(
