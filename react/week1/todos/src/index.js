@@ -43,9 +43,9 @@ function Footer() {
 
 ReactDOM.render(
   <div id="todo">
-    <Header></Header>
-    <TodoList todos={todosArray}></TodoList>
-    <Footer></Footer>
+    <Header />
+    <TodoList todos={todosArray} />
+    <Footer />
   </div>,root
 )
 
