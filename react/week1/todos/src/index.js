@@ -11,7 +11,7 @@ const root = document.getElementById('root')
    return <li>{props.description}, {props.deadline}</li>
  }
 
-class Todo extends React.Component {
+class TodoList extends React.Component {
   render() {
    const todoList = this.props.todos;
    const result = todoList.map(element => {
@@ -51,7 +51,7 @@ class Footer extends React.Component {
 ReactDOM.render(
   <div id="todo">
     <Header></Header>
-    <Todo todos={todosArray}></Todo>
+    <TodoList todos={todosArray}></TodoList>
     <Footer></Footer>
   </div>,root
 )
