@@ -31,27 +31,21 @@ const todos = [
  ];
  
 class TodoList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { 
+    state = { 
       todoList: []
     } 
-    this.addTodo = this.addTodo.bind(this)
-    this.deleteTodo = this.deleteTodo.bind(this)
-    this.handleCheckbox = this.handleCheckbox.bind(this)
-  }
 
-  addTodo() {  
+  addTodo = () => {  
     let randomNumber = Math.floor(Math.random() * todos.length);
     this.setState({ todoList: this.state.todoList.concat(todos[randomNumber]) })   
   }
 
-  deleteTodo(index) {
+  deleteTodo = (index) => {
     let todo = this.state.todoList.filter((element, elementIndex) => elementIndex !== index)
     this.setState({ todoList: todo })
   }
 
-  handleCheckbox(index) {
+  handleCheckbox = (index) => {
     this.setState({
       todoList: this.state.todoList.map((todo,todoIndex) => {
         if(todoIndex === index) {           
