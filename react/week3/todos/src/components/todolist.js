@@ -109,8 +109,6 @@ class TodoList extends React.Component {
   
     handleSubmit = (event) => {   
       this.setState({
-        description: this.state.description,
-        deadline: this.state.deadline,
         todoList: [...this.state.todoList, {description: this.state.description, deadline: this.state.deadline, checked:false} ]
       })
       event.preventDefault()
