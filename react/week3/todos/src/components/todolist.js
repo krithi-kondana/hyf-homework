@@ -11,7 +11,7 @@ class Form extends React.Component {
             <label>Deadline:
               <input type="date" value={this.props.deadline} onChange={this.props.handleDeadlineChange} name="deadline" required /><br />
             </label>
-            <input type='submit' value='Add todo' />
+           <button type="submit">Add todo</button>
           </form>
         </div>
       )
