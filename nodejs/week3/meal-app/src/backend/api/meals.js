@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
             // http://localhost:5000/api/meals
         })
     } else if (maxPrice) {
-        pool.query(`select * from meal where price < ${parseFloat(maxPrice)}`, function(error, results, fields) {
+        pool.query(`select * from meal where price < ?`, parseFloat(maxPrice), function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
@@ -39,7 +39,7 @@ router.get("/", (req, res) => {
     } else if (title) {
         pool.query(`select * 
         from meal
-        where title like '%${title}%'`, function(error, results, fields) {
+        where title like ?`, `%${title}%`, function(error, results, fields) {
             if (error) {
                 console.log(error);;
             }
@@ -49,7 +49,7 @@ router.get("/", (req, res) => {
     } else if (createdAfter) {
         pool.query(`select *
         from meal
-        where created_date > '${createdAfter}'`, function(error, results, fields) {
+        where created_date > ?`, `${createdAfter}`, function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
@@ -59,7 +59,7 @@ router.get("/", (req, res) => {
     } else if (limit) {
         pool.query(`select *
         from meal
-        limit ${limit}`, function(error, results, fields) {
+        limit ?`, `${limit}`, function(error, results, fields) {
             if (error) {
                 console.log(error);
             }
@@ -71,14 +71,14 @@ router.get("/", (req, res) => {
 
 
 // Returns all meals
-router.get("/", (req, res) => {
-    pool.query("select * from meal", function(error, results, fields) {
-        if (error) {
-            console.log(err);;
-        }
-        res.send(results)
-    });
-});
+// router.get("/", (req, res) => {
+   // pool.query("select * from meal", function(error, results, fields) {
+     //   if (error) {
+       //     console.log(err);;
+        //}
+        //res.send(results)
+    //});
+//});
 // http://localhost:5000/api/meals
 
 
