@@ -39,7 +39,7 @@ class Todo extends React.Component {
   
     updateTodo = (event) => {
       event.preventDefault()
-      this.props.editTodo(this.props.index, this.input.value);
+      this.props.editTodo(this.props.index, this.input);
       this.toggleState()
     }
   
@@ -134,7 +134,7 @@ class TodoList extends React.Component {
     
     editTodo = (index, event) => {
       let todo = this.state.todoList[index]
-      todo['description'] = event
+      todo['description'] = event.value
       this.setState({ todoList: this.state.todoList })
     }
      
