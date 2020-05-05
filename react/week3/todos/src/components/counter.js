@@ -13,7 +13,7 @@ class Counter extends React.Component {
       clearInterval(this.counter);
     }
   
-    timer() {
+    timer = () => {
       this.setState({ value: this.state.value + 1 })
     }
   
