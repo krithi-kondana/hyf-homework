@@ -20,7 +20,7 @@ class Form extends React.Component {
 
 function FancyBorder(props) {
   return (
-    <div className={'FancyBorder'}>
+    <div className="FancyBorder">
       {props.children}
     </div>
   )
