@@ -29,7 +29,7 @@ class SpamDetector {
         return subjectOfMail==='hello';
     }
     isSpam(email) {
-        if (this.filterBasedOnWords(email) === true || this.filterBasedOnWordHello(email) === true || this.filterBasedOnUpperCaseCharacters(email) === true) {
+        if (this.filterBasedOnWords(email) || this.filterBasedOnWordHello(email) || this.filterBasedOnUpperCaseCharacters(email)) {
             return true
         }
         return false
