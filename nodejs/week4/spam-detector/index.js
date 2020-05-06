@@ -26,10 +26,7 @@ class SpamDetector {
     }
     filterBasedOnWordHello(email) {
         const subjectOfMail = email.subject.toLowerCase();
-        if (subjectOfMail == 'hello') {
-            return true
-        };
-        return false
+        return subjectOfMail==='hello';
     }
     isSpam(email) {
         if (this.filterBasedOnWords(email) === true || this.filterBasedOnWordHello(email) === true || this.filterBasedOnUpperCaseCharacters(email) === true) {
