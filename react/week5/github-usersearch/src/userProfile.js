@@ -6,16 +6,12 @@ function Profile() {
   const [item, setItem] = useState({});
 
     useEffect(() => {
-      let isFetched = true
       fetch(`https://api.github.com/users/${username}`)
       .then(response => response.json())
       .then(item => {
-        if(isFetched) {
           setItem(item);
-        }
       })
-      return () => isFetched = false
-    })
+    }, [username])
 
     return (
       <div>
