@@ -1,5 +1,7 @@
 potato
 tomato
-pumpkin
+modified pumpkin
 onion
 ginger
+carrot
+beetrot
