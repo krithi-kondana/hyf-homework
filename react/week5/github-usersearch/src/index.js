@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   changeSearchTerm = (event) => {
-    let searchedValue = event.target.value
+    const searchedValue = event.target.value
     this.setState({ 
       searchTerm: searchedValue,
       isLoading: true
