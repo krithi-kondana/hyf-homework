@@ -1,0 +1,71 @@
+h1, p {
+  color: rgb(51, 50, 50);
+}
+li {
+  list-style: none;
+}
+.user {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user li {
+  width: 300px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+.user img {
+  width:70px;
+  height: 70px;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+.home input {
+ height: 15px;
+ padding: 5px;
+ border-radius: 20px;
+}
+
+.home ul li a {
+  color: black;
+}
+.about, .home, .homelink, .userProfile {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  padding: 20px;
+}
+.about img {
+  width: 300px;
+}
+.about a, .home a, .homelink a {
+  color: black;
+  background: white;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+}
+.userProfile img {
+  width: 200px;
+}
+.userProfile a {
+  text-decoration: none;
+   color: black;
+   border: 1px solid black;
+}
+.userProfile {
+ box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+ width: 400px;
+ margin: 0 auto;
+}
+.home {
+ background: rgb(68, 67, 67);
+ color: white;
+}
